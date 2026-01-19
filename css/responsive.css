@@ -1,0 +1,337 @@
+/* ============================================
+   DBR Wikberg - Responsive Styles
+   Mobile First Approach
+   ============================================ */
+
+/* ============================================
+   Tablet (768px+)
+   ============================================ */
+
+@media (min-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Header */
+    .header__inner {
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+
+    .logo__tagline {
+        display: block;
+    }
+
+    /* Hero */
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero__buttons {
+        flex-direction: row;
+    }
+
+    .hero__contact {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+
+    /* Quick Contact */
+    .quick-contact__inner {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-xl);
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Service Area */
+    .service-area__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA Buttons */
+    .cta__buttons {
+        flex-direction: row;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    /* Page Header */
+    .page-header__title {
+        font-size: 3rem;
+    }
+
+    /* Service Detail */
+    .service-detail__content {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .service-detail:nth-child(even) .service-detail__content {
+        direction: rtl;
+    }
+
+    .service-detail:nth-child(even) .service-detail__content > * {
+        direction: ltr;
+    }
+
+    .service-detail__image img {
+        height: 300px;
+    }
+
+    /* About Intro */
+    .about-intro {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Content */
+    .contact-content {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    /* Form Row */
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   Desktop (1024px+)
+   ============================================ */
+
+@media (min-width: 1024px) {
+    /* Header */
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .header__cta {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none !important;
+    }
+
+    /* Hero */
+    .hero__content {
+        padding: var(--spacing-xxl);
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-card__image img {
+        height: 250px;
+    }
+}
+
+/* ============================================
+   Large Desktop (1200px+)
+   ============================================ */
+
+@media (min-width: 1200px) {
+    /* Typography */
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    /* Hero */
+    .hero__title {
+        font-size: 4rem;
+    }
+
+    /* Service Detail */
+    .service-detail__image img {
+        height: 350px;
+    }
+
+    /* About Intro */
+    .about-intro__image img {
+        height: 450px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    .feature-item {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    .header,
+    .footer,
+    .btn,
+    .mobile-nav,
+    .cta,
+    .quick-contact {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+        page-break-after: avoid;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .section {
+        padding: 1rem 0;
+    }
+
+    .page-header {
+        padding: 2rem 0;
+        background: none;
+        color: #000;
+    }
+
+    .page-header::before {
+        display: none;
+    }
+
+    .page-header__title,
+    .page-header__subtitle {
+        color: #000;
+    }
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   High Contrast Mode
+   ============================================ */
+
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #000;
+    }
+
+    .btn--primary {
+        border: 2px solid var(--color-accent-hover);
+    }
+
+    .btn--secondary {
+        border-width: 3px;
+    }
+
+    .service-card,
+    .feature-item,
+    .value-card,
+    .project-card,
+    .contact-info,
+    .contact-form-wrapper {
+        border: 2px solid var(--color-text);
+    }
+}
+
+/* ============================================
+   Dark Mode Support (Future)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    /* Placeholder for future dark mode support */
+    /* Currently not implemented as per spec */
+}
